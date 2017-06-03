@@ -881,7 +881,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wave: 0
-  hazard: {fileID: 1422098111432630, guid: 24bf0d829c1d146499c9a284661951e7, type: 2}
+  SpawnWaitCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  WaveWaitcurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  EnemySpeedCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hazard: {fileID: 1107965690373352, guid: 641b06369dcdbce42b68b986e48ae06d, type: 2}
   SpawnPoints:
   - {fileID: 1562212005}
   - {fileID: 1387858403}

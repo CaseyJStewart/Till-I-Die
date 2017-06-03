@@ -6,6 +6,9 @@ using UnityEngine.AI;
 public class WaveSystem : MonoBehaviour
 {
     public int Wave;
+    public AnimationCurve SpawnWaitCurve;
+    public AnimationCurve WaveWaitcurve;
+    public AnimationCurve EnemySpeedCurve;
     public GameObject hazard;
     public GameObject[] SpawnPoints;
     public GameObject Enemies;
@@ -36,10 +39,19 @@ public class WaveSystem : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             // End of the WAVE
-            Wave++;
-            hazardCount += 2;
+            WaveCompleted();
             yield return new WaitForSeconds(waveWait);
         }
+    }
+
+    void WaveCompleted()
+    {
+        spawnWait = Mathf.Clamp(SpawnWaitCurve.Evaluate(Time.time), 0, 25);
+        waveWait = Mathf.Clamp(WaveWaitcurve.Evaluate(Time.time), 0, 25);
+        agent.speed = Mathf.Clamp(EnemySpeedCurve.Evaluate(Time.time), 0, 25);
+
+        Wave++;
+        hazardCount += 2;
     }
 
     void Update()
