@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 114376927979492046}
   - component: {fileID: 195876218096007274}
   - component: {fileID: 114480034917573242}
+  - component: {fileID: 114565160246141102}
   m_Layer: 8
   m_Name: Zombie Braains v1.2
   m_TagString: Player
@@ -1627,6 +1628,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+--- !u!114 &114565160246141102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107965690373352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c74fefb5395a54dbe51b9b0fc611a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114963808582641022
 MonoBehaviour:
   m_ObjectHideFlags: 1

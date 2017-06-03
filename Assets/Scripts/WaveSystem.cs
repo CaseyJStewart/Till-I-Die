@@ -11,13 +11,12 @@ public class WaveSystem : MonoBehaviour
     public AnimationCurve EnemySpeedCurve;
     public GameObject hazard;
     public GameObject[] SpawnPoints;
-    public GameObject Enemies;
+    private GameObject Enemies;
     private NavMeshAgent agent;
     public int hazardCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;
-    public int holder = 8;
 
     void Start()
     {
@@ -51,15 +50,12 @@ public class WaveSystem : MonoBehaviour
         agent.speed = Mathf.Clamp(EnemySpeedCurve.Evaluate(Time.time), 0, 25);
 
         Wave++;
-        hazardCount += 2;
+        hazardCount += Random.Range(0, 2);
     }
 
     void Update()
     {
-        if(Wave == 1)
-        {
-            
-        }
+        
     }
 
 }

@@ -883,22 +883,58 @@ MonoBehaviour:
   Wave: 0
   SpawnWaitCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   WaveWaitcurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   EnemySpeedCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   hazard: {fileID: 1107965690373352, guid: 641b06369dcdbce42b68b986e48ae06d, type: 2}
   SpawnPoints:
   - {fileID: 1562212005}
@@ -909,12 +945,10 @@ MonoBehaviour:
   - {fileID: 47691423}
   - {fileID: 34860712}
   - {fileID: 819046474}
-  Enemies: {fileID: 0}
   hazardCount: 3
   spawnWait: 1
   startWait: 1
   waveWait: 1
-  holder: 0
 --- !u!1 &1295027615
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Player : Stats
 {
     public Text PlayerHealth;
@@ -9,7 +10,7 @@ public class Player : Stats
     {
         if (currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         PlayerHealth.text = "Health " + ":" + currentHealth;
     }

@@ -10,6 +10,7 @@ public class EnemyDamage : MonoBehaviour
         {
             Debug.Log("Take damage");
             col.GetComponent<Player>().ReceiveDamage(10f);
+            Destroy(this.gameObject);
         }
 
     }
