@@ -7,6 +7,6 @@ public class LoadGame : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("TestProject");
+        SceneManager.LoadScene("Main");
     }
 }

@@ -11,6 +11,12 @@ public class GyroController : MonoBehaviour
     private GameObject cameraContainer; // so the player is set standing
     private Quaternion rot;
 
+    public float speedH = 2.0f;
+    public float speedV = 2.0f;
+
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
+
     void Start()
     {
         cameraContainer = new GameObject("Camera Container");
@@ -40,7 +46,16 @@ public class GyroController : MonoBehaviour
         if(gyroEnabled)
         {
             transform.localRotation = gyro.attitude * rot;
-        } 
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+
+            yaw += speedH * Input.GetAxis("Mouse X");
+            pitch -= speedV * Input.GetAxis("Mouse Y");
+
+            transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        }
     }
 
 }

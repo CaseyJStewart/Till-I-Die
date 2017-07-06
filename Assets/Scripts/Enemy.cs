@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Enemy : Stats
 {
-    enum EnemyType
-    {
-
-    }
-
     void Update()
     {
         if (currentHealth <= 0)

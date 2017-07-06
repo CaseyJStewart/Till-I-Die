@@ -6,6 +6,7 @@ public class TouchController : MonoBehaviour
 {
     public int Speed;
     public Rigidbody Bullet;
+
     void Start()
     {
     }
@@ -17,12 +18,18 @@ public class TouchController : MonoBehaviour
         {
             return;
         }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Rigidbody rocketClone = (Rigidbody)Instantiate(Bullet, this.gameObject.transform.GetChild(0).position, Bullet.transform.rotation);
+        //    rocketClone.velocity = transform.forward * Speed;
+        //}
+
 
         if (Input.touchCount > 0)
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            if (Input.GetTouch(0).phase == TouchPhase.Began || Input.GetMouseButtonDown(0))
             {
-                Rigidbody rocketClone = (Rigidbody)Instantiate(Bullet, this.gameObject.transform.GetChild(0).position, transform.rotation);
+                Rigidbody rocketClone = (Rigidbody)Instantiate(Bullet, this.gameObject.transform.GetChild(0).position, Bullet.transform.rotation);
                 rocketClone.velocity = transform.forward * Speed;
             }
         }
